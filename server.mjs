@@ -141,7 +141,12 @@ app.get('/:userId/:postId/delete',(req,res)=>{
 
 
 
+app.use(express.static(join(__dirname, 'dist')));
 
+// Handle all requests and serve the React app
+app.get('/', (req, res) => {
+  res.sendFile(join(__dirname, 'dist', 'index.html'));
+});
 
 
 // eslint-disable-next-line no-undef
