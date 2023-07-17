@@ -25,7 +25,7 @@ export default function CreatePost({opened,close,userData,setUserData}){
         formData.append('title', title);
         formData.append('content', content);
         formData.append('image', file);
-        fetch(`http://localhost:3000/${userData._id}/post`, {
+        fetch(`/${userData._id}/post`, {
             method: 'POST',
             body: formData,
           })
