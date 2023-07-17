@@ -27,7 +27,7 @@ export default function Signin({setIsSignIn,setIsLoggedIn,setUserData}) {
         password: passwordValue
       };
       
-      fetch("http://localhost:3000/signin", {
+      fetch("/signin", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -31,7 +31,7 @@ export default function Signup({setIsSignIn,setIsLoggedIn,setUserData}) {
       };
       console.log(data);
       
-      fetch("http://localhost:3000/signup", {
+      fetch("/signup", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

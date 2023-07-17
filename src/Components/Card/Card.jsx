@@ -36,7 +36,7 @@ export default function CardComponent({userId,postId,title,content,image,date,se
 
 
     function deletePost(){
-      fetch(`http://localhost:3000/${userId}/${postId}/delete`)
+      fetch(`/${userId}/${postId}/delete`)
       .then(response => response.json())
       .then(data => setUserData(data))
       .catch(err => console.log(err));
@@ -79,7 +79,7 @@ export default function CardComponent({userId,postId,title,content,image,date,se
         
       <Card key={title} p="md" radius="md" component="a" className={classes.card} onClick={open}>
       <AspectRatio ratio={1920 / 1080}>
-          <Image src={`http://localhost:3000/images/${image}`} />
+          <Image src={`/images/${image}`} />
       </AspectRatio>
       <Text color="dimmed" size="xs" transform="uppercase" weight={700} mt="md">
           {date}
